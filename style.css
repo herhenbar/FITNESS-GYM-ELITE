@@ -539,7 +539,7 @@ body {
 }
 
 html, body {
-  background-color: #0B1C2D !important;
+  background-color: #000000 !important;
   color: #F5F2EE !important;
 }
 .card,
@@ -550,5 +550,242 @@ html, body {
   border: 1px solid #D4AF37;
 }
 
+/* Estilos gemini adicionados em 12/02 */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;700&display=swap');
+
+:root {
+    --yellow-lambo: #F9D71C;
+    --shocking-orange: #FF5F1F;
+    --off-white: #E6E6E6;
+}
+
+/* Reset de fundo para Preto Absoluto */
+body {
+    background-color: #000000 !important;
+    background-image: none !important; /* Remove o gradiente antigo */
+    color: var(--off-white) !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Headline Anton - O Soco */
+h1, .headline {
+    font-family: 'Anton', sans-serif !important;
+    color: #FFFFFF !important;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    line-height: 1.1;
+}
+
+/* Yellow Lambo para Autoridade */
+.subheadline, .highlight, h2, h3, .price {
+    color: var(--yellow-lambo) !important;
+    font-family: 'Anton', sans-serif !important;
+}
+
+/* CTA Shocking Orange */
+.cta-button {
+    background-color: var(--shocking-orange) !important;
+    color: #FFFFFF !important;
+    font-family: 'Anton', sans-serif !important;
+    border-radius: 0px !important;
+    border: none;
+    box-shadow: 0 8px 20px rgba(255, 95, 31, 0.4);
+}
+
+.hero-content h1 {
+    font-family: 'Montserrat', sans-serif !important;
+    color: #FFFFFF !important;
+    font-size: 32px !important; /* Aumentado conforme falamos */
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    font-style: normal !important;
+}
+
+/* HEADLINE PRINCIPAL (TOPO DA PÁGINA) */
+.headline {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 900 !important;
+    font-size: 42px !important; /* Tamanho maior para destaque total */
+    line-height: 1.1 !important;
+    color: #FFFFFF !important;
+    text-align: center !important;
+    text-transform: uppercase !important;
+    margin-bottom: 10px !important;
+    letter-spacing: -1px !important;
+    font-style: normal !important;
+}
+
+/* SUBHEADLINE - VOLTANDO PARA O CINZA SOBRIO */
+.subheadline {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 20px !important;
+    color: #CCCCCC !important; /* Cinza claro em vez de amarelo */
+    text-align: center !important;
+    text-transform: uppercase !important;
+    margin-bottom: 40px !important;
+    letter-spacing: 1px !important;
+    font-style: normal !important;
+}
+
+/* TEXTO AO LADO DA FOTO - CINZA COM DESTAQUES */
+.hero-content p {
+    font-size: 21px !important;
+    line-height: 1.5 !important;
+    color: #888888 !important; /* Cinza médio para o texto base */
+    font-style: normal !important;
+    margin-bottom: 20px !important;
+}
+
+/* DESTAQUES DENTRO DO TEXTO (AS PALAVRAS EM BOLD) */
+.hero-content p strong {
+    color: #EEEEEE !important; /* Quase branco para saltar aos olhos */
+    font-weight: 700 !important;
+}
+
+/* AJUSTE FINAL PARA PREÇO EM LINHA ÚNICA */
+.highlight {
+    display: block !important;
+    width: 100% !important;
+    clear: both !important;
+    white-space: nowrap !important; /* Força a ficar numa linha só */
+    font-size: 21px !important;
+    color: #888888 !important;
+    margin-top: 25px !important;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+/* No telemóvel, permitimos a quebra para não cortar o ecrã */
+@media (max-width: 768px) {
+    .highlight {
+        white-space: normal !important;
+        font-size: 18px !important;
+        text-align: center !important;
+    }
+}
+/* TEXTO AO LADO DA FOTO - CLAREADO */
+.hero-content p {
+    font-size: 21px !important;
+    line-height: 1.5 !important;
+    color: #CCCCCC !important; /* Clareado: saiu do cinza sofrido para um cinza legível */
+    font-style: normal !important;
+    margin-bottom: 20px !important;
+}
+
+/* DESTAQUES EM BOLD - QUASE BRANCO */
+.hero-content p strong {
+    color: #FFFFFF !important; /* Branco puro para saltar no fundo preto */
+    font-weight: 700 !important;
+}
+
+/* PREÇO - CLAREADO */
+.highlight {
+    /* ... mantenha as outras regras de linha única que você colou por último ... */
+    color: #CCCCCC !important; /* Preço agora legível, mas sem "gritar" como o amarelo */
+}
+
+.content h3 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 22px !important;
+    color: #FFFFFF !important; /* Branco igual à head principal */
+    margin-bottom: 25px !important;
+}
+
+.content ul li {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 19px !important;
+    color: #CCCCCC !important;
+    line-height: 1.6 !important;
+    text-transform: none !important; /* Garante que não fique tudo em caixa alta */
+    font-weight: 400 !important;    /* Força o peso normal, sem bold */
+}
+
+.content ul li strong {
+    font-weight: 400 !important;    /* Remove o bold até das tags strong se elas existirem */
+    color: #CCCCCC !important;      /* Mantém a cor uniforme com o resto do texto */
+}
 
 
+
+
+body {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('assets/images/bg-gym.jpg') !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+}
+
+
+/* Padroniza o bloco da Ivy League e os outros bullets */
+div strong + em, 
+div strong, 
+.features div {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 17px !important; /* Ajuste fino para caber na linha */
+    color: #CCCCCC !important;
+    line-height: 1.4 !important;
+}
+
+div strong {
+    color: #FFFFFF !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+.cta-button {
+    position: relative;
+    overflow: hidden; /* Necessário para o brilho não vazar */
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1); /* Transição suave */
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button:hover {
+    transform: scale(1.03); /* Leve crescimento */
+    box-shadow: 0 8px 25px rgba(255, 204, 0, 0.4); /* Glow na cor do seu destaque */
+    filter: brightness(1.1);
+}
+
+/* O "Brilho" que atravessa o botão */
+.cta-button::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 20%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(30deg);
+    transition: none;
+}
+
+.cta-button:hover::after {
+    left: 120%;
+    transition: all 0.7s ease-in-out;
+}
+
+/* RESET TOTAL DE FONTE E COR PARA O TEXTO PRINCIPAL */
+div, p, span {
+    font-family: 'Inter', sans-serif !important;
+    color: #ffffff !important;
+    font-size: 19px !important;
+    line-height: 1.6 !important;
+    text-shadow: none !important; /* Remove qualquer sombra que cause borrão */
+    font-weight: 400 !important;
+}
+
+/* DESTACA O NEGRITO */
+strong {
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    font-size: 19px !important;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+    div, p, span, strong {
+        font-size: 18px !important;
+    }
+}
