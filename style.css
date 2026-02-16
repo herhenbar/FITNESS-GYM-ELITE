@@ -829,12 +829,13 @@ p {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Fix para o fundo não explodir no iPhone */
-@supports (-webkit-touch-callout: none) {
-   .testimony-section, 
-   .seu-container-da-foto { /* Troque pelo nome da sua classe se souber */
-      background-attachment: scroll !important;
-      background-size: cover !important;
-      background-position: center center !important;
-   }
+/* Se for iOS, remove o efeito que causa o zoom */
+@supports (-webkit-overflow-scrolling: touch) {
+  .testimony-section, 
+  section, 
+  div[style*="background-image"] {
+    background-attachment: scroll !important;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
 }
