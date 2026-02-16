@@ -789,3 +789,42 @@ strong {
         font-size: 18px !important;
     }
 }
+
+/* Fix específico para o fundo no iOS */
+.testimony-section, .your-main-section-class {
+    background-attachment: scroll !important; /* iOS exige scroll para não borrar */
+    background-position: center center;
+    background-size: cover;
+}
+
+/* Garante que o efeito de vidro funcione no Safari */
+.glass-box {
+    -webkit-backdrop-filter: blur(12px) !important; /* Obrigatório para iOS */
+    backdrop-filter: blur(12px) !important;
+}
+
+
+/* O preço de R$ 29,90 */
+.price {
+    color: #FFCC00 !important; /* Amarelo de destaque */
+    font-size: 32px !important; /* Tamanho grande para conversão */
+    font-weight: 900 !important;
+    font-family: 'Inter', sans-serif !important;
+    margin-top: 10px !important;
+}
+
+/* O preço riscado R$ 57,00 */
+.original-price {
+    color: #999999 !important; /* Cinza para parecer menos importante */
+    font-size: 18px !important;  /* Menor que o preço atual */
+    text-decoration: line-through !important; /* Riscado */
+    font-weight: 400 !important;
+    margin-right: 10px !important;
+}
+
+
+p {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
