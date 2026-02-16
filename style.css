@@ -829,13 +829,27 @@ p {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Se for iOS, remove o efeito que causa o zoom */
-@supports (-webkit-overflow-scrolling: touch) {
-  .testimony-section, 
-  section, 
-  div[style*="background-image"] {
-    background-attachment: scroll !important;
-    background-size: cover !important;
-    background-position: center center !important;
-  }
+/* 1. Mata o efeito bugado no container atual */
+.testimony-section, .seu-container-especifico {
+    background-image: none !important;
+    background-color: transparent !important;
+    position: relative;
+    z-index: 1;
 }
+
+/* 2. Cria um fundo novo que o iOS é obrigado a aceitar */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* COLOQUE O LINK DA SUA FOTO ABAIXO */
+    background-image: url('SUA-IMAGEM-AQUI.jpg'); 
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Fica atrás de tudo */
+    will-change: transform; /* Força aceleração de hardware no iOS */
+}
+
