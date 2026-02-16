@@ -830,22 +830,27 @@ p {
 }
 
 
-/* 1. Base para todos (Mobile/iOS/Android) - Foto nítida e rolando com o texto */
+/* Remove o fundo do body para não conflitar */
 body {
-    background-color: #000000 !important;
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                      url('assets/images/bg-gym.jpg') !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    background-attachment: scroll !important; /* O segredo para o iOS */
+    background-color: #000 !important;
+    background-image: none !important;
 }
 
-/* 2. Efeito Fixo apenas para Desktop (telas maiores que 1024px) */
-@media (min-width: 1024px) {
-    body {
-        background-attachment: fixed !important;
-    }
+/* A nova camada de fundo que funciona em qualquer iPhone */
+.bg-fixed-ios {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                      url('assets/images/bg-gym.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Fica atrás de tudo */
+    pointer-events: none; /* Não interfere nos cliques */
+    -webkit-transform: translateZ(0); /* Estabilizador Safari */
 }
+
 
 
