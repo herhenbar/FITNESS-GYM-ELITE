@@ -830,31 +830,42 @@ p {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* 1. Ajuste de Altura Dinâmica (Sugestão do Claude) */
+/* Base para todos os dispositivos */
 html {
-    height: -webkit-fill-available;
+  height: 100%;
 }
 
-/* 2. Aplicação Segura no Body */
 body {
+  margin: 0;
+  padding: 0;
+  background-image: url('sua-imagem.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Fixed para desktop/android */
+  min-height: 100vh;
+}
+
+/* FORÇA scroll apenas no iOS/Safari mobile */
+@supports (-webkit-touch-callout: none) {
+  body {
+    background-attachment: scroll !important;
     min-height: 100vh;
     min-height: -webkit-fill-available;
-    /* Forçamos o scroll no Mobile para matar o zoom */
-    background-attachment: scroll !important;
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                      url('assets/images/bg-gym.jpg') !important;
-    background-position: center center !important;
-    background-size: cover !important;
-    -webkit-background-size: cover !important;
+  }
+  
+  html {
+    height: -webkit-fill-available;
+  }
 }
 
-/* 3. Mantém o efeito 'Parallax' no PC (Onde funciona) */
-@media (min-width: 1024px) {
-    body {
-        background-attachment: fixed !important;
-    }
+/* Fallback adicional para Safari iOS */
+@media screen and (max-width: 768px) {
+  body {
+    -webkit-background-size: cover;
+    background-attachment: scroll;
+  }
 }
-
 
 
 
