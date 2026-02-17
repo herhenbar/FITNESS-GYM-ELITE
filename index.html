@@ -27,8 +27,7 @@ src="https://www.facebook.com/tr?id=1757436611671883&ev=PageView&noscript=1"/>
 
 </head>
 <body>
-  <div class="bg-fixed"></div>
-     
+<div class="bg-fixed-ios"></div>
     <div class="container">
         <header>
     <h1 class="headline">O "SEXTO DEDO" DA INDÚSTRIA FITNESS ESTÁ NA SUA CARA.</h1>
@@ -101,7 +100,7 @@ para "Definir" ?
 <div class="price-box">
                 <p><strong>Leitura Direta • Sem Atalhos • Sem Enrolação</strong></p>
                 <p class="price"><span class="original-price">R$ 57,00</span> R$ 29,90</p>
-                <p><strong>O preço de duas barrinhas de proteína para salvar meses de treino</strong>.</p>
+                <p>O preço de 02 barrinhas de proteína para salvar meses de erros.</p>
                 <a href="https://pay.hotmart.com/N104403968K?checkoutMode=10" class="cta-button">ENTRAR NO GYM ELITE AGORA</a>
                 <p style="margin-top: 15px; font-size: 14px;">Pagamento 100% seguro · Acesso imediato</p>
             </div>
@@ -190,21 +189,6 @@ function flipCard(container) {
     container.classList.toggle('flipped');
 }
 </script>
-    <script>
-        // Detecta iOS e força a correção do fundo e da altura
-        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-        if (isIOS) {
-            // Mata o zoom removendo o 'fixed'
-            document.body.style.setProperty('background-attachment', 'scroll', 'important');
-            
-            // Corrige o buraco branco/preto no fundo do Safari
-            document.documentElement.style.height = '-webkit-fill-available';
-            document.body.style.minHeight = '-webkit-fill-available';
-            
-            console.log("iOS Detectado: Correção de fundo aplicada.");
-        }
-    </script>
-</body>
-</html>
+
 </body>
 </html>
