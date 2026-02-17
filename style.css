@@ -948,3 +948,93 @@ h2, .section-title, .price {
     color: #d4af37 !important;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important;
 }
+
+
+
+.final-cta-box {
+    background: #000 !important; /* Fundo preto puro para contraste total no mobile */
+    border: 1px solid #d4af37;
+    padding: 40px 25px !important;
+    margin: 60px auto;
+    max-width: 650px;
+    text-align: center;
+}
+
+.emoji-callout {
+    color: #FF5F1F !important;
+    font-size: 14px !important;
+    font-weight: 800 !important;
+    letter-spacing: 1px;
+    margin-bottom: 15px !important;
+}
+
+.final-cta-box h2 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 900 !important;
+    font-size: 26px !important;
+    color: #fff !important;
+    border: none !important;
+    margin-bottom: 20px !important;
+}
+
+.pitch-text {
+    font-size: 17px !important;
+    line-height: 1.5 !important;
+    color: #ccc !important;
+    max-width: 500px;
+    margin: 0 auto 30px !important;
+}
+
+.divider-line {
+    color: #d4af37;
+    opacity: 0.3;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
+}
+
+.product-tag {
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    color: #fff !important;
+    margin-bottom: 5px !important;
+}
+
+.product-sub {
+    font-size: 15px !important;
+    color: #999 !important;
+    margin-bottom: 25px !important;
+}
+
+.investment-box {
+    margin-bottom: 30px;
+}
+
+.investment-box span {
+    display: block;
+    font-size: 14px;
+    color: #d4af37;
+    font-weight: 900;
+}
+
+.final-price {
+    font-size: 48px !important;
+    color: #d4af37 !important;
+    line-height: 1 !important;
+    margin-top: 10px !important;
+}
+
+.urgency-footer {
+    font-size: 12px !important;
+    color: #FF5F1F !important;
+    font-weight: 800 !important;
+    margin-top: 25px !important;
+}
+
+/* Mobile Fix: Garante que o texto não aperte nas bordas */
+@media (max-width: 768px) {
+    .final-cta-box {
+        width: 95%;
+        padding: 40px 15px !important;
+    }
+    .final-price { font-size: 42px !important; }
+}
