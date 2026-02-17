@@ -831,6 +831,26 @@ p {
 }
 
 
+/* Ajuste de altura específica para Safari iOS */
+html {
+    height: -webkit-fill-available;
+}
+
+body {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    /* Força o fundo a não dar zoom, usando a premissa do scroll */
+    background-attachment: scroll !important;
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
+}
+
+/* Garante que no Desktop o efeito fixo continue funcionando */
+@media (min-width: 1024px) {
+    body {
+        background-attachment: fixed !important;
+    }
+}
 
 
 
