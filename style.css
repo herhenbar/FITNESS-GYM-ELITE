@@ -711,10 +711,35 @@ h1, .headline {
 
 
 body {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                url('assets/images/bg-gym.jpg') !important;
-    background-size: cover !important;
-    background-attachment: fixed !important;
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                    url('./imagens/bg-gym.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  min-height: 100vh;
+}
+
+html {
+  height: 100%;
+}
+
+/* Desktop = parallax */
+@media (min-width: 769px) {
+  body {
+    background-attachment: fixed;
+  }
+}
+
+/* Mobile/iOS = scroll */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll !important;
+    min-height: -webkit-fill-available;
+  }
+  html {
+    height: -webkit-fill-available;
+  }
 }
 
 
@@ -830,36 +855,6 @@ p {
     -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  background-image: url('assets/images/bg-gym.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-}
-
-/* Desktop gets parallax */
-@media (min-width: 769px) {
-  body {
-    background-attachment: fixed;
-  }
-}
-
-/* Mobile gets scroll (includes iOS) */
-@media (max-width: 768px) {
-  body {
-    background-attachment: scroll;
-    -webkit-background-size: cover;
-  }
-  
-  html {
-    height: 100%;
-  }
-  
-  body {
-    min-height: -webkit-fill-available;
-  }
-}
 
 
 
