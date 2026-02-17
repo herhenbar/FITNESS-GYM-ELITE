@@ -866,6 +866,27 @@ body {
     background-attachment: scroll;
   }
 }
+/* Desktop/Android - parallax ON */
+body {
+  background-image: url('assets/images/bg-gym.jpg'); /* keep yours */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* iOS only - kills the zoom beast */
+@supports (-webkit-touch-callout: none) {
+  body {
+    background-attachment: scroll !important;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+  }
+  html {
+    height: -webkit-fill-available;
+  }
+}
 
 
 
