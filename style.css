@@ -889,15 +889,20 @@ body {
 
 @supports (-webkit-touch-callout: none) {
   body {
-    background: linear-gradient(-45deg, #ff0000, #8b0000, #000000, #330000) !important;
-    background-size: 400% 400% !important;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
     background-attachment: scroll !important;
-    animation: gradientShift 15s ease infinite !important;
   }
   
-  @keyframes gradientShift {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
+  /* Add this to your content containers */
+  .container,
+  .content {
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !important;
   }
 }
+
 
