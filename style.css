@@ -6,7 +6,12 @@
     font-family: 'Georgia', serif;
 }
 
-
+body {
+    background-color: #0a1a1a;
+    color: #e0d0a0;
+    line-height: 1.6;
+    background-image: linear-gradient(to bottom, rgba(5, 15, 15, 0.95), rgba(10, 26, 26, 0.98));
+}
 
 .container {
     max-width: 900px;
@@ -324,47 +329,11 @@ footer {
 }
 
 /* Estilos finais adicionados em 26/04 */
-/* Remove TODOS os outros blocos de body que você tem */
-
-html {
-  height: 100%;
-}
-
 body {
   margin: 0;
-  padding: 0;
   font-family: 'Montserrat', sans-serif;
+  background: #001d26;
   color: #f5f5e5;
-  line-height: 1.6;
-  min-height: 100vh;
-  
-  /* Background com gradient */
-  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                    url('./assets/images/bg-gym.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-}
-
-/* Desktop = fixed parallax */
-@media (min-width: 769px) {
-  body {
-    background-attachment: fixed;
-  }
-}
-
-/* Mobile/iOS = scroll (sem zoom) */
-@media (max-width: 768px) {
-  html {
-    height: -webkit-fill-available;
-  }
-  
-  body {
-    background-attachment: scroll;
-    min-height: -webkit-fill-available;
-    -webkit-background-size: cover;
-  }
 }
 
 .content {
@@ -567,7 +536,12 @@ body {
         font-size: 18.5px;
         line-height: 1.5;
     }
+}
 
+html, body {
+  background-color: #000000 !important;
+  color: #F5F2EE !important;
+}
 .card,
 .box,
 .price-box,
@@ -587,7 +561,12 @@ body {
 }
 
 /* Reset de fundo para Preto Absoluto */
-
+body {
+    background-color: #000000 !important;
+    background-image: none !important; /* Remove o gradiente antigo */
+    color: var(--off-white) !important;
+    font-family: 'Inter', sans-serif !important;
+}
 
 /* Headline Anton - O Soco */
 h1, .headline {
@@ -730,7 +709,12 @@ h1, .headline {
 
 
 
-
+body {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('assets/images/bg-gym.jpg') !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+}
 
 
 /* Padroniza o bloco da Ivy League e os outros bullets */
