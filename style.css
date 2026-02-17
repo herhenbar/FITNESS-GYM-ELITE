@@ -215,14 +215,15 @@ header {
 }
 
 .price-box {
-    background-color: rgba(20, 30, 30, 0.7);
-    padding: 30px;
-    border-radius: 3px;
+    background: rgba(15, 15, 15, 0.5) !important; /* Transparência 0.5 conforme pediu */
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    padding: 40px 30px !important;
+    border-radius: 12px !important;
     text-align: center;
     margin: 40px 0;
-    border: 1px solid #c0a060;
+    border: 1px solid rgba(212, 175, 55, 0.4) !important;
 }
-
 .price {
     font-size: 38px;
     color: #d4af37;
@@ -546,7 +547,6 @@ html, body {
 .box,
 .price-box,
 .guarantee-box {
-  background-color: #0B1F26 !important;
   border: 1px solid #D4AF37;
 }
 
@@ -561,12 +561,6 @@ html, body {
 }
 
 /* Reset de fundo para Preto Absoluto */
-body {
-    background-color: #000000 !important;
-    background-image: none !important; /* Remove o gradiente antigo */
-    color: var(--off-white) !important;
-    font-family: 'Inter', sans-serif !important;
-}
 
 /* Headline Anton - O Soco */
 h1, .headline {
@@ -830,35 +824,44 @@ p {
 }
 
 
-/* CENTRALIZAÇÃO DA GARANTIA */
+/* GARANTIA - VERSÃO FINAL REFINADA */
 .guarantee-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza tudo horizontalmente */
-    text-align: center;   /* Centraliza o texto */
-    padding: 40px 20px !important;
-    border: 1px solid #ae8b38 !important;
-    background: #001d26 !important;
+    background: rgba(15, 15, 15, 0.5) !important; /* Suavizado conforme pediu */
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(212, 175, 55, 0.4) !important;
+    border-radius: 15px !important;
+    padding: 60px 30px !important; /* Mais respiro interno */
     margin: 60px auto !important;
+    max-width: 850px !important; /* Mais largura para o texto respirar */
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
 }
 
 .guarantee-content {
-    flex-direction: column !important; /* Coloca o escudo em cima do título */
-    justify-content: center;
-    gap: 15px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
 }
 
 .guarantee-content h3 {
-    margin: 0 !important;
-    font-size: 22px !important;
+    font-size: 28px !important; /* Título maior e imponente */
+    font-weight: 900 !important;
     color: #ffffff !important;
+    margin: 0 !important;
+    line-height: 1.2 !important;
 }
 
 .guarantee-box p {
-    max-width: 600px; /* Evita que o texto fique largo demais e feio */
+    font-size: 19px !important; /* Texto de corpo maior e legível */
+    line-height: 1.7 !important;
+    color: #cccccc !important;
+    max-width: 750px !important; /* Distribuição melhor das linhas */
     margin: 20px auto 0 !important;
 }
-
 
 /* 1. Primeiro, define o fundo preto para TODO MUNDO (inclusive iOS) */
 body {
@@ -952,27 +955,71 @@ h2, .section-title, .price {
 
 
 .final-cta-box {
-    background: #050505;
-    border: 1px solid #d4af37;
-    padding: 50px 25px !important;
+    /* Estilo Vidro Premium */
+    background: rgba(15, 15, 15, 0.75) !important; 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    padding: 50px 30px !important;
     margin: 60px auto;
-    max-width: 650px;
+    max-width: 700px;
     text-align: center;
-    border-radius: 8px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+}
+
+/* Head Laranja (Aumentada) */
+.final-callout {
+    color: #FF5F1F !important;
+    font-size: 16px !important; /* Aumentei para não ficar pequena */
+    font-weight: 800 !important;
+    letter-spacing: 1px;
+    margin-bottom: 15px !important;
+}
+
+.final-cta-box {
+    /* Estilo Vidro Premium */
+    background: rgba(15, 15, 15, 0.5) !important; 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    padding: 50px 30px !important;
+    margin: 60px auto;
+    max-width: 700px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+}
+
+/* Head Laranja (Aumentada) */
+.final-callout {
+    color: #FF5F1F !important;
+    font-size: 16px !important; /* Aumentei para não ficar pequena */
+    font-weight: 800 !important;
+    letter-spacing: 1px;
+    margin-bottom: 15px !important;
 }
 
 .final-cta-box h2 {
-    font-size: 26px !important;
+    font-size: 28px !important;
     font-weight: 900 !important;
     color: #fff !important;
-    margin-bottom: 10px !important;
+    margin-bottom: 15px !important;
     border: none !important;
+    line-height: 1.2 !important;
 }
 
+/* Descrição (Corrigido tamanho e cor) */
 .final-description {
-    font-size: 16px !important;
-    color: #999 !important;
-    margin-bottom: 30px !important;
+    font-size: 18px !important; /* Estava pequena, agora está legível */
+    color: #ffffff !important; /* Branco puro para contraste total */
+    font-weight: 500 !important;
+    margin-bottom: 35px !important;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .price-container {
@@ -987,28 +1034,30 @@ h2, .section-title, .price {
 }
 
 .final-price {
-    font-size: 56px !important;
+    font-size: 60px !important; /* Flex total no preço */
     color: #d4af37 !important;
     font-weight: 900 !important;
+    line-height: 1 !important;
 }
 
+/* Frase do Vol 2 (Agora Legível) */
 .vol2-discreto {
-    font-size: 13px !important;
-    color: #666 !important;
-    margin-top: 20px !important;
-    font-style: italic;
+    font-size: 15px !important; /* Aumentado */
+    color: #d4af37 !important; /* Mudei para dourado sutil para ser legível no escuro */
+    margin-top: 25px !important;
+    font-weight: 600 !important;
 }
 
 .urgency-footer {
     font-size: 12px !important;
     color: #FF5F1F !important;
-    font-weight: 800 !important;
-    margin-top: 15px !important;
+    font-weight: 900 !important;
+    margin-top: 20px !important;
     text-transform: uppercase;
 }
 
-/* Ajuste mobile rápido */
+/* Mobile Fix */
 @media (max-width: 480px) {
-    .final-price { font-size: 48px !important; }
-    .final-cta-box { width: 92%; }
+    .final-cta-box { width: 92%; padding: 40px 20px !important; }
+    .final-price { font-size: 50px !important; }
 }
