@@ -830,61 +830,34 @@ p {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Base para todos os dispositivos */
-html {
-  height: 100%;
-}
-
 body {
-  margin: 0;
-  padding: 0;
-  background-image: url('sua-imagem.jpg');
+  background-image: url('assets/images/bg-gym.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* Fixed para desktop/android */
   min-height: 100vh;
 }
 
-/* FORÇA scroll apenas no iOS/Safari mobile */
-@supports (-webkit-touch-callout: none) {
+/* Desktop gets parallax */
+@media (min-width: 769px) {
   body {
-    background-attachment: scroll !important;
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
+    background-attachment: fixed;
+  }
+}
+
+/* Mobile gets scroll (includes iOS) */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+    -webkit-background-size: cover;
   }
   
   html {
-    height: -webkit-fill-available;
+    height: 100%;
   }
-}
-
-/* Fallback adicional para Safari iOS */
-@media screen and (max-width: 768px) {
+  
   body {
-    -webkit-background-size: cover;
-    background-attachment: scroll;
-  }
-}
-/* Desktop/Android - parallax ON */
-body {
-  background-image: url('assets/images/bg-gym.jpg'); /* keep yours */
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  min-height: 100vh;
-}
-
-/* iOS only - kills the zoom beast */
-@supports (-webkit-touch-callout: none) {
-  body {
-    background-attachment: scroll !important;
-    min-height: 100vh;
     min-height: -webkit-fill-available;
-  }
-  html {
-    height: -webkit-fill-available;
   }
 }
 
