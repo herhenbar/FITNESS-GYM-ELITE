@@ -887,23 +887,20 @@ body {
    }
 }
 
-
+/* iOS gets its own image */
 @supports (-webkit-touch-callout: none) {
   body {
-    background: 
-      linear-gradient(135deg, 
-        #000000 0%, 
-        #1a1a1a 25%, 
-        #0d0d0d 50%, 
-        #1a1a1a 75%, 
-        #000000 100%) !important;
-    background-size: 200% 200% !important;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                      url('./assets/images/bg-mobile.jpg') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
     background-attachment: scroll !important;
-    animation: shine 8s ease infinite !important;
+    min-height: 100vh !important;
+    min-height: -webkit-fill-available !important;
   }
   
-  @keyframes shine {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
+  html {
+    height: -webkit-fill-available !important;
   }
 }
