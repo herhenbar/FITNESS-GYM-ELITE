@@ -904,3 +904,47 @@ body {
     height: -webkit-fill-available !important;
   }
 }
+
+
+/* ============================================================
+   FECHAMENTO MAROMBA - AJUSTES DE ESTÉTICA FINA
+   ============================================================ */
+
+/* 1. "Os 500 primeiros..." - Aumentar e dar destaque */
+.hero-content .highlight strong {
+    font-size: 26px !important; /* Estava 21px, agora vai saltar */
+    color: #FFFFFF !important;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* 2 e 3. CTAs 1 e 2 - BOLD MAROMBA (Peso 900) */
+.cta-button {
+    font-weight: 900 !important;
+    font-family: 'Montserrat', sans-serif !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+    font-size: 22px !important; /* Ganho de tamanho para autoridade */
+}
+
+/* 4. "10 capítulos detalhados..." - Mudar de Branco para Dourado */
+.features .feature p[style*="color: #ffcc00"], 
+.features .feature p {
+    color: #d4af37 !important; /* O dourado que você pediu */
+    font-weight: 700 !important;
+    font-size: 18px !important;
+}
+
+/* 5. Testemunhos: Nome, Profissão e Local em Dourado */
+.testimonial .author {
+    color: #d4af37 !important; /* Dourado Premium */
+    font-weight: 800 !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 17px !important;
+}
+
+/* EXTRA: Garante que o dourado não fique apagado no fundo novo */
+h2, .section-title, .price {
+    color: #d4af37 !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important;
+}
