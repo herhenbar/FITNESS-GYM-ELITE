@@ -860,40 +860,4 @@ p {
 }
 
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Montserrat', sans-serif;
-  color: #e0e0e0;
-  line-height: 1.6;
-  min-height: 100vh;
-  
-  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                    url('./assets/images/bg-gym.jpg');
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-}
 
-/* Desktop e Android = parallax */
-@media (min-width: 769px) {
-  body {
-    background-attachment: fixed;
-  }
-}
-
-/* iOS força scroll (sem zoom) */
-@supports (-webkit-touch-callout: none) {
-  body {
-    background-attachment: scroll !important;
-  }
-}
-.content,
-.container {
-  background: transparent !important;
-}
-
-.content:before {
-  display: none !important;
-}
