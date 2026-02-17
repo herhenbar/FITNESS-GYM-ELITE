@@ -860,4 +860,30 @@ p {
 }
 
 
+/* 1. Primeiro, define o fundo preto para TODO MUNDO (inclusive iOS) */
+body {
+    background-color: #000000 !important;
+    background-image: none !important;
+}
+
+/* 2. Agora, libera a imagem APENAS para quem NÃO é iOS */
+/* Isso ativa o fundo no Android e no Desktop */
+@media screen and (min-width: 0px) {
+    /* O seletor abaixo exclui o Safari do iPhone */
+    _:-webkit-full-screen, :host:not(:root), body {
+        background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                          url('assets/images/bg-gym.jpg') !important;
+        background-attachment: fixed !important;
+        background-size: cover !important;
+        background-position: center center !important;
+    }
+}
+
+/* 3. Garantia final: Se for detectado iPhone/iPad, força o preto e remove a imagem */
+@supports (-webkit-touch-callout: none) {
+   body {
+      background-image: none !important;
+      background-color: #000000 !important;
+   }
+}
 
