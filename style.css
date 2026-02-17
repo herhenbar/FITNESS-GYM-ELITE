@@ -183,18 +183,7 @@ header {
     position: relative;
 }
 
-.content::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('/api/placeholder/1000/600');
-    background-size: cover;
-    opacity: 0.1;
-    z-index: -1;
-}
+
 
 .ebook-preview {
     display: flex;
@@ -966,4 +955,5 @@ p {
   background-color: transparent !important;
   background: none !important;
 }
+
 
