@@ -6,7 +6,12 @@
     font-family: 'Georgia', serif;
 }
 
-
+body {
+    background-color: #0a1a1a;
+    color: #e0d0a0;
+    line-height: 1.6;
+    background-image: linear-gradient(to bottom, rgba(5, 15, 15, 0.95), rgba(10, 26, 26, 0.98));
+}
 
 .container {
     max-width: 900px;
@@ -183,7 +188,18 @@ header {
     position: relative;
 }
 
-
+.content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/api/placeholder/1000/600');
+    background-size: cover;
+    opacity: 0.1;
+    z-index: -1;
+}
 
 .ebook-preview {
     display: flex;
@@ -313,87 +329,11 @@ footer {
 }
 
 /* Estilos finais adicionados em 26/04 */
-html {
-  height: 100%;
-}
-
 body {
   margin: 0;
-  padding: 0;
   font-family: 'Montserrat', sans-serif;
+  background: #001d26;
   color: #f5f5e5;
-  line-height: 1.6;
-  min-height: 100vh;
-  background-color: #0a1a1a;
-  color: #e0e0e0;
-  position: relative;
-}
-
-/* Nova div com a imagem */
-.bg-fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                    url('./assets/images/bg-gym.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: -1;
-}
-
-/* Mobile iOS */
-@media (max-width: 768px) {
-  .bg-fixed {
-    position: absolute;
-  }
-  
-  html {
-    height: -webkit-fill-available;
-  }
-  
-  body {
-    min-height: -webkit-fill-available;
-  }
-}
-/* --- DEVOLVENDO A ALMA DO SITE (Sem quebrar o fundo) --- */
-
-/* 1. Garante que o container centralize tudo no Desktop e Mobile */
-.container {
-    max-width: 900px !important;
-    margin: 0 auto !important;
-    padding: 20px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-}
-
-/* 2. Devolve a cor do seu Botão CTA (Ajuste o código da cor se for outro) */
-.cta-button {
-    background-color: #FF5F1F !important; /* Laranja forte */
-    color: #ffffff !important;
-    text-decoration: none !important;
-    padding: 18px 35px !important;
-    font-weight: 900 !important;
-    text-transform: uppercase !important;
-    border-radius: 5px !important;
-    display: inline-block !important;
-    margin-top: 20px !important;
-}
-
-/* 3. Garante que as seções tenham fundo escuro (Evita o fundo branco no iOS) */
-section {
-    width: 100% !important;
-    background-color: transparent !important; /* Deixa o fundo do body aparecer */
-    padding: 40px 0 !important;
-}
-
-/* 4. Fix para as fontes não ficarem minúsculas ou estranhas */
-h1, h2, h3 {
-    text-align: center !important;
-    margin-bottom: 20px !important;
 }
 
 .content {
@@ -598,7 +538,10 @@ h1, h2, h3 {
     }
 }
 
-
+html, body {
+  background-color: #000000 !important;
+  color: #F5F2EE !important;
+}
 .card,
 .box,
 .price-box,
@@ -618,6 +561,12 @@ h1, h2, h3 {
 }
 
 /* Reset de fundo para Preto Absoluto */
+body {
+    background-color: #000000 !important;
+    background-image: none !important; /* Remove o gradiente antigo */
+    color: var(--off-white) !important;
+    font-family: 'Inter', sans-serif !important;
+}
 
 /* Headline Anton - O Soco */
 h1, .headline {
@@ -759,6 +708,13 @@ h1, .headline {
 
 
 
+
+body {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('assets/images/bg-gym.jpg') !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+}
 
 
 /* Padroniza o bloco da Ivy League e os outros bullets */
@@ -904,16 +860,40 @@ p {
 }
 
 
-..content,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #e0e0e0;
+  line-height: 1.6;
+  min-height: 100vh;
+  
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                    url('./assets/images/bg-gym.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+/* Desktop e Android = parallax */
+@media (min-width: 769px) {
+  body {
+    background-attachment: fixed;
+  }
+}
+
+/* iOS força scroll (sem zoom) */
+@supports (-webkit-touch-callout: none) {
+  body {
+    background-attachment: scroll !important;
+  }
+}
+.content,
 .container {
   background: transparent !important;
-  position: relative;
-  z-index: 1;
 }
 
 .content:before {
   display: none !important;
 }
-
-
-
