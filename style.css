@@ -707,39 +707,11 @@ h1, .headline {
     color: #CCCCCC !important;      /* Mantém a cor uniforme com o resto do texto */
 }
 
-
-
-
 body {
-  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                    url('./imagens/bg-gym.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  min-height: 100vh;
-}
-
-html {
-  height: 100%;
-}
-
-/* Desktop = parallax */
-@media (min-width: 769px) {
-  body {
-    background-attachment: fixed;
-  }
-}
-
-/* Mobile/iOS = scroll */
-@media (max-width: 768px) {
-  body {
-    background-attachment: scroll !important;
-    min-height: -webkit-fill-available;
-  }
-  html {
-    height: -webkit-fill-available;
-  }
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('assets/images/bg-gym.jpg') !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
 }
 
 
