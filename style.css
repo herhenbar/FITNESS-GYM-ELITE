@@ -887,10 +887,9 @@ body {
    }
 }
 
-/* iOS Safari detection */
 @supports (-webkit-touch-callout: none) {
   body {
-    background: linear-gradient(-45deg, #1a1a1a, #2a2a2a, #3a3a3a, #2a2a2a) !important;
+    background: linear-gradient(-45deg, #ff0000, #8b0000, #000000, #330000) !important;
     background-size: 400% 400% !important;
     background-attachment: scroll !important;
     animation: gradientShift 15s ease infinite !important;
@@ -901,5 +900,4 @@ body {
     50% { background-position: 100% 50%; }
   }
 }
-
 
