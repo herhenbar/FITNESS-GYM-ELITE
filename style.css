@@ -887,26 +887,4 @@ body {
    }
 }
 
-body {
-  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                    url('./assets/images/bg-gym.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-color: #000000; /* fallback preto pro iOS */
-  min-height: 100vh;
-}
 
-/* Desktop/Android = parallax */
-@media (hover: hover) and (pointer: fine) {
-  body {
-    background-attachment: fixed;
-  }
-}
-
-/* Mobile = scroll (nunca fixed) */
-@media (hover: none) and (pointer: coarse) {
-  body {
-    background-attachment: scroll;
-  }
-}
