@@ -891,29 +891,19 @@ body {
 @supports (-webkit-touch-callout: none) {
   body {
     background: 
-      radial-gradient(ellipse at top, #1a1a1a 0%, #000000 50%),
-      radial-gradient(ellipse at bottom, #0d0d0d 0%, #000000 100%) !important;
+      linear-gradient(135deg, 
+        #000000 0%, 
+        #1a1a1a 25%, 
+        #0d0d0d 50%, 
+        #1a1a1a 75%, 
+        #000000 100%) !important;
+    background-size: 200% 200% !important;
     background-attachment: scroll !important;
-    position: relative !important;
+    animation: shine 8s ease infinite !important;
   }
   
-  body::before {
-    content: '' !important;
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    background: 
-      linear-gradient(180deg, transparent 0%, rgba(255,255,255,0.02) 50%, transparent 100%),
-      repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.03) 2px, rgba(255,255,255,0.03) 4px) !important;
-    pointer-events: none !important;
-    z-index: 1 !important;
-  }
-  
-  .container,
-  .content {
-    position: relative !important;
-    z-index: 2 !important;
+  @keyframes shine {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
   }
 }
