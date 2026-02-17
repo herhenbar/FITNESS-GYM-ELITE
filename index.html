@@ -189,5 +189,21 @@ function flipCard(container) {
     container.classList.toggle('flipped');
 }
 </script>
+    <script>
+        // Detecta iOS e força a correção do fundo e da altura
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+        if (isIOS) {
+            // Mata o zoom removendo o 'fixed'
+            document.body.style.setProperty('background-attachment', 'scroll', 'important');
+            
+            // Corrige o buraco branco/preto no fundo do Safari
+            document.documentElement.style.height = '-webkit-fill-available';
+            document.body.style.minHeight = '-webkit-fill-available';
+            
+            console.log("iOS Detectado: Correção de fundo aplicada.");
+        }
+    </script>
+</body>
+</html>
 </body>
 </html>
