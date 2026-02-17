@@ -887,39 +887,26 @@ body {
    }
 }
 
-/* 1. Base para todos os dispositivos */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Montserrat', sans-serif;
-  color: #f5f5e5;
-  line-height: 1.6;
-  min-height: 100vh;
-  background-color: #000000; /* Fundo de segurança se a imagem demorar */
-  
-  /* Caminho que você confirmou que funciona */
   background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
                     url('./assets/images/bg-gym.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  background-color: #000000; /* fallback preto pro iOS */
+  min-height: 100vh;
 }
 
-/* 2. Regra para DESKTOP (Com Mouse) - ATIVA O PARALLAX */
+/* Desktop/Android = parallax */
 @media (hover: hover) and (pointer: fine) {
   body {
-    background-attachment: fixed !important;
+    background-attachment: fixed;
   }
 }
 
-/* 3. Regra para MOBILE (Touch/iPhone) - MATA O ZOOM */
+/* Mobile = scroll (nunca fixed) */
 @media (hover: none) and (pointer: coarse) {
-  html {
-    height: -webkit-fill-available;
-  }
   body {
-    background-attachment: scroll !important; /* Aqui o iPhone para de dar zoom */
-    min-height: -webkit-fill-available;
-    -webkit-background-size: cover;
+    background-attachment: scroll;
   }
 }
