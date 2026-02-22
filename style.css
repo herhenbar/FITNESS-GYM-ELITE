@@ -80,7 +80,7 @@ h1 {
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 0;
-    margin: 20px 0;
+    margin: 5px 0;
     font-weight: bold;
     text-align: center;
     letter-spacing: 1px;
@@ -571,11 +571,6 @@ h1, .headline {
     line-height: 1.1;
 }
 
-/* Yellow Lambo para Autoridade */
-.subheadline, .highlight, h2, h3, .price {
-    color: var(--yellow-lambo) !important;
-    font-family: 'Anton', sans-serif !important;
-}
 
 /* CTA Shocking Orange */
 .cta-button {
@@ -1061,3 +1056,4 @@ h2, .section-title, .price {
     .final-cta-box { width: 92%; padding: 40px 20px !important; }
     .final-price { font-size: 50px !important; }
 }
+
