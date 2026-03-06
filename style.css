@@ -376,8 +376,9 @@ body {
 }
 
 .cta-subtitle {
-  font-size: 18px;
+  font-size: 15px;
   margin-bottom: 20px;
+font-weight:400;
 }
 
 .cta-button {
@@ -580,6 +581,7 @@ h1, .headline {
     border-radius: 0px !important;
     border: none;
     box-shadow: 0 8px 20px rgba(255, 95, 31, 0.4);
+white-space: nowrap;
 }
 
 .hero-content h1 {
@@ -587,7 +589,7 @@ h1, .headline {
     color: #FFFFFF !important;
     font-size: 32px !important; /* Aumentado conforme falamos */
     font-weight: 900 !important;
-    text-transform: uppercase !important;
+    text-transform: none !important;
     font-style: normal !important;
 }
 
@@ -1067,4 +1069,9 @@ h2, .section-title, .price {
     padding-left: 20px;
     padding-right: 20px;
   }
+}
+
+.hero-content p,
+.hero-content li {
+    text-transform: none !important;
 }
