@@ -1076,3 +1076,24 @@ h2, .section-title, .price {
     text-transform: none !important;
 }
 
+
+
+/* HERO CTA 1 - teste amarelo lambo */
+.cta-button-hero{
+  background: #F9D71C !important;
+  background-color: #F9D71C !important;
+  color: #111111 !important;
+  box-shadow: 0 8px 20px rgba(249, 215, 28, 0.35) !important;
+}
+
+.cta-button-hero:hover{
+  background: #F9D71C !important;
+  background-color: #F9D71C !important;
+  color: #111111 !important;
+  box-shadow: 0 8px 24px rgba(249, 215, 28, 0.42) !important;
+  filter: brightness(1.03) !important;
+}
+
+.cta-button-hero .cta-sub{
+  color: #111111 !important;
+}
