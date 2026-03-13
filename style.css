@@ -1153,7 +1153,9 @@ h2, .section-title, .price {
     white-space: normal !important;
   }
 }
-.highlight-word{
-  color: #F9D71C;
-  font-weight: 700;
+header .subheadline .highlight-word{
+  color: #F9D71C !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+  font-weight: inherit !important;
 }
