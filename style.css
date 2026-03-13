@@ -1153,3 +1153,7 @@ h2, .section-title, .price {
     white-space: normal !important;
   }
 }
+.highlight-word{
+  color: #F9D71C;
+  font-weight: 700;
+}
