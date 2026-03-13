@@ -1140,7 +1140,7 @@ h2, .section-title, .price {
 
 @media (max-width: 768px) {
   .price-box .price {
-    font-size: 28px !important;
+    font-size: 30px !important;
     line-height: 1.05 !important;
     letter-spacing: 0 !important;
   }
