@@ -1154,3 +1154,10 @@ h2, .section-title, .price {
   }
 }
 
+.hero-quote-author{
+opacity:0.65;
+font-size:0.85rem;
+letter-spacing:1px;
+margin-top:8px;
+display:block;
+}
