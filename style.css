@@ -1168,3 +1168,7 @@ display:block;
   line-height: 1.2 !important;
   padding: 24px 24px !important;
 }
+.hero .price,
+.hero .price-original{
+color:#000 !important;
+}
